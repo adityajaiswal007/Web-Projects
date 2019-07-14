@@ -1,0 +1,44 @@
+<% include partials/header %>
+    <div class="profile-container" data-aos="fade-up" data-aos-duration="1000">
+        <!-- <img src="<%= results[0].profilePic %>" alt="" class="profile-container-image"> -->
+        <img src="<%= results[results.length-1].profilepic %>" alt="" class="profile-container-image">
+        <div class="profile-container-content">
+            <div class="profile-container-content-heading">
+                <p>Full Name</p>
+                <p>Phone</p>
+                <p>Address</p>
+                <!-- <p>Email</p> -->
+                <p>Gender</p>
+                <p>Place Born</p>
+                <p>Date Born</p>
+                <p>Job</p>
+                <p>Institution</p>
+                <!-- <p><%= results[results.length-1].profilepic %></p> -->
+            </div>
+            <div class="profile-container-content-details">
+                <p><%= results[results.length-1].fullname %></p>
+                <p><%= results[results.length-1].phone %></p>
+                <p><%= results[results.length-1].address %></p>
+                <!-- <p><%= results[results.length-1].email %></p> -->
+                <p><%= results[results.length-1].gender %></p>
+                <p><%= results[results.length-1].placeborn %></p>
+                <p><%= results[results.length-1].d %></p>
+                <p><%= results[results.length-1].job %></p>
+                <p><%= results[results.length-1].institution %></p>
+                <div class="together">
+                    <button class="button"><a href="/profile/update"><span>Edit </span></a></button>
+                    <form action="/account/delete" method="POST">
+                        <button class="button-delete">Delete Account</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var select = document.getElementById('3')
+        select.onload = load();
+        function load() {
+            select.classList.add('side-nav-item-active');
+        }
+    </script>  
+<% include partials/footer %> 

@@ -1,0 +1,246 @@
+body{
+	background-color: #000;
+	font-family: 'Open Sans', sans-serif
+}
+.heading {
+	display: inline-block;
+}
+
+#landing-header{
+	z-index: 1;
+	position: relative;
+	text-align: center;
+	padding-top: 40vh;
+}
+#landing-header h1{
+	color: #fff;
+}
+.slideshow{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.slideshow li{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	opacity: 0;
+	z-index: 0;
+	animation: imageAnimation 25s linear infinite;
+}
+.slideshow li:nth-child(1) { 
+  background-image: url(https://images.unsplash.com/photo-1518110516893-31ce851decb0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b8757e7de4ecb8fb79654a5a2e9cc25d&auto=format&fit=crop&w=1500&q=80) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(/img/6.jpg);
+  animation-delay: 5s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(/img/7.jpg);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(/img/14.jpg);
+  animation-delay: 15s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(/img/18.jpg);
+  animation-delay: 20s; 
+}
+/* .slideshow li:nth-child(6) { 
+  background-image: url(https://images.unsplash.com/photo-1468421870903-4df1664ac249?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3aa575e67b51bc49d1d37949b2189938&auto=format&fit=crop&w=889&q=80);
+  animation-delay: 25s; 
+}
+.slideshow li:nth-child(7) { 
+  background-image: url(https://images.unsplash.com/photo-1494236581341-7d38b2e7d824?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2b44f9024c70028dc5bd2046d3a38cf6&auto=format&fit=crop&w=644&q=80);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(8) { 
+  background-image: url(https://images.unsplash.com/photo-1516383740770-fbcc5ccbece0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0a57fc0234d9265182e1412b501af3d9&auto=format&fit=crop&w=667&q=80);
+  animation-delay: 35s; 
+}
+.slideshow li:nth-child(9) { 
+  background-image: url(https://images.unsplash.com/photo-1504460918753-aca2e0d9b1a6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=afd542744811c66313cf8e436096223c&auto=format&fit=crop&w=750&q=80);
+  animation-delay: 40s; 
+}
+.slideshow li:nth-child(10) { 
+  background-image: url(https://images.unsplash.com/photo-1505377059067-e285a7bac49b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=59a4f9bd3ccc0008ba4f965f84614d90&auto=format&fit=crop&w=755&q=80);
+  animation-delay: 45s; 
+} */
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+} 
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
+/* .btn {
+	text-transform: uppercase;
+	text-decoration: none;
+	margin-top: 1.3rem;
+	padding: 1rem 1.5rem;
+	display: inline-block;
+	transition: all .2s;
+	position: relative;
+	font-size: 1rem;
+	border: none;
+	cursor: pointer;
+	border-radius: 3px;
+}
+.btn:hover {
+	transform: translateY(-3px);
+	box-shadow: 0.6rem 0.6rem rgba(0,0,0,.2);
+}
+.btn:hover::after {
+	transform: scaleX(1.4) scaleY(1.6);
+	opacity: 0;
+}
+.btn:focus {
+	transform: translateY(-1px);
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+	outline: none;
+}
+.btn-green {
+	background-color: #55c57a;
+	color: #fff;
+}
+.btn-green::after {
+	background-color: #55c57a;
+} */
+
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  position: relative;
+	border: none;
+	margin: 2rem;
+}
+.btn:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn:hover::after {
+  -webkit-transform: scaleX(1.4) scaleY(1.6);
+          transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.btn:active {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-color {
+  background-color: #FF3366;
+  color: #fff;
+}
+.btn-color::after {
+  background-color: #FF3366;
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+.btn-animated {
+  -webkit-animation: moveInBottom .5s ease-out .75s;
+          animation: moveInBottom .5s ease-out .75s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+@-webkit-keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+
+.main-logo {
+	margin-left: 1rem;
+}
+
+.logo {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding-bottom: 2px;
+  font-weight: 700;
+  display: inline-block;
+  background-image: -webkit-gradient(linear, left top, right top, from(#7ed56f), to(#28b483));
+  background-image: linear-gradient(to right, #7ed56f, #28b483);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.logo:hover {
+  -webkit-transform: skewY(4deg) skewX(5deg) scale(1.1);
+  transform: skewY(4deg) skewX(5deg) scale(1.1);
+  /* text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); */
+}
+
+.logo-link {
+  text-decoration: none;
+  color: transparent;
+}

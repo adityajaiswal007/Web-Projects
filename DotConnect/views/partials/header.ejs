@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/heart.css">
+        <link href="/css/aos.css" rel="stylesheet">
+        <link rel="shortcut icon" type="img/png" href="img/smile.png">
+        <title>.CONNECT</title>
+    </head>
+    <body>
+        <div class="container">
+            <% if(message.length) { %>
+            <div class="flash-message">	
+                    <p><%= message %></p>
+            </div>
+            <% } %>
+            <header class="header">
+                <h2 class="heading-secondary logo">
+                    <a href="/" class="logo-link">.connect</a>
+                </h2>
+                <form action="/addFriend" class="search" method="POST">
+                    <input type="text" class="search-input" placeholder="search" name="search">
+                    <button class="search-button">
+                        <svg class="search-icon">
+                            <use xlink:href="/img/sprite.svg#icon-magnifying-glass"></use>
+                        </svg>
+                    </button>
+                </form>
+                <nav class="user-nav">
+                    <div class="user-nav-icon-box">
+                        <!-- <svg class="user-nav-icon">
+                                <use xlink:href="/img/sprite.svg#icon-bell"></use>
+                            </svg> -->
+                        <p>Uploads </p>
+                        <span class="user-nav-notification"><%= uploads %></span>
+                    </div>
+                    <a href="/friend" class="heading-profile">
+                        <div class="user-nav-icon-box link">
+                            <!-- <svg class="user-nav-icon">
+                                    <use xlink:href="/img/sprite.svg#icon-bell"></use>
+                                </svg> -->
+                            <p>Following</p>
+                            <span class="user-nav-notification"><%= following %></span>
+                        </div>
+                    </a>
+                    <a href="/follower" class="heading-profile margin-left">
+                        <div class="user-nav-icon-box link">
+                            <!-- <svg class="user-nav-icon">
+                                <use xlink:href="/img/sprite.svg#icon-bell"></use>
+                            </svg> -->
+                                <p>Followers</p>
+                                <span class="user-nav-notification"><%= follower %></span>
+                        </div>
+                    </a>
+                    <!-- <div class="user-nav-icon-box">
+                        <svg class="user-nav-icon">
+                            <use xlink:href="/img/sprite.svg#icon-chat"></use>
+                        </svg>
+                        <span class="user-nav-notification">13</span>
+                    </div> -->
+                    <a href="/profile" class="heading-profile">
+                        <div class="user-nav-user link align padding margin-left margin-right2">
+                            <img src="<%= profilepic %>" alt="photo" class="user-nav-photo">
+                            <span class="user-nav-name"><%= username %></span>
+                        </div>
+                    </a>   
+                </nav>
+            </header>
+            <div class="content">
+                <nav class="sidebar">
+                    <ul class="side-nav">
+                        <li class="side-nav-item" id="1">
+                            <a href="/home" class="side-nav-link">
+                                <svg class="side-nav-icon">
+                                    <use xlink:href="/img/sprite.svg#icon-home"></use>
+                                </svg>
+                                <span class="side-nav-name">Home</span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item" id="2">
+                            <a href="/upload" class="side-nav-link">
+                                <svg class="side-nav-icon">
+                                    <use xlink:href="/img/sprite.svg#icon-arrow-up"></use>
+                                </svg>
+                                <span class="side-nav-name">Upload</span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item" id="3">
+                            <a href="/profile" class="side-nav-link">
+                                <svg class="side-nav-icon">
+                                    <use xlink:href="/img/sprite.svg#icon-v-card"></use>
+                                </svg>
+                                <span class="side-nav-name">Profile</span>
+                            </a> 
+                        </li>
+                        <li class="side-nav-item" id="4">
+                            <a href="/friend" class="side-nav-link">
+                                <svg class="side-nav-icon">
+                                    <use xlink:href="/img/sprite.svg#icon-users"></use>
+                                </svg>
+                                <span class="side-nav-name">Following</span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item" id="5">
+                            <a href="/todo" class="side-nav-link">
+                                <svg class="side-nav-icon">
+                                    <use xlink:href="/img/sprite.svg#icon-pin"></use>
+                                </svg>
+                                <span class="side-nav-name">To-Do list</span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item" id="6">
+                            <a href="/feedback" class="side-nav-link">
+                                <svg class="side-nav-icon">
+                                    <use xlink:href="/img/sprite.svg#icon-star"></use>
+                                </svg>
+                                <span class="side-nav-name">Feedback</span>
+                            </a>
+                        </li>
+                        <% if( username === 'admin') { %>
+                        <li class="side-nav-item" id="7">
+                            <a href="/database" class="side-nav-link">
+                                <svg class="side-nav-icon">
+                                   <use xlink:href="/img/sprite.svg#icon-database"></use>
+                                </svg>
+                                <span class="side-nav-name">Database</span>
+                            </a>
+                        </li>
+                        <% } %>
+                        <li class="side-nav-item">
+                            <a href="/logout" class="side-nav-link">
+                                <svg class="side-nav-icon">
+                                    <use xlink:href="/img/sprite.svg#icon-emoji-sad"></use>
+                                </svg>
+                                <span class="side-nav-name">Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <main class="view">        
+        
