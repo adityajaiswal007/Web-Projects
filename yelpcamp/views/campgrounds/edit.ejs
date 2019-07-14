@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+
+<div style="text-align:center">
+	<h1>Edit <%= editCamp.name %></h1>
+</div>
+<form action="/campground/<%= editCamp._id %>?_method=PUT" method="POST">
+    <div style="margin:20px auto;width:30%;">
+	    <div class="form-group">
+	    	<input class="form-control" type="text" name="edit[name]" value="<%= editCamp.name %>">
+	    </div>
+	    <div class="form-group">
+	    	<input class="form-control" type="text" name="edit[image]" value="<%= editCamp.image %>">
+	    </div>
+	    <div class="form-group">
+	    	<input class="form-control" type="text" name="edit[description]" value="<%= editCamp.description %>">
+	    </div>
+	    <div class="form-group">
+	    	<button class="btn btn-block btn-primary">Submit</button>
+	    </div>
+	    <a href="/campground">Go back</a>
+    </div>
+</form>
+
+
+<% include ../partials/footer %>
